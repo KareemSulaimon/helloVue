@@ -1,0 +1,434 @@
+section#services {
+    display: flex;
+    flex-direction: column;
+    padding:  5rem 0;
+
+   
+ summary {
+   @include flexColomn;
+  
+    .ovarall{
+      @include flexRow;
+
+      .summary {
+        @include flexColomn;
+        @include center;
+        width: 100vw;
+        position: relative;
+        background: url();
+  
+        .summarySlat{
+          @include flexColomn;
+          @include center;
+          text-align: center;
+          width: 33vw;
+          height: 600px;
+        
+
+          content: "";
+          -webkit-transform: skew(9deg);
+          -moz-transform: skew(0deg);
+          -o-transform: skew(0deg);
+
+         
+
+
+          &:hover {
+            transform: scale(1.01);
+          }
+          
+          img  {
+            position: absolute;
+            z-index: -9999;
+            opacity: .5;
+            background-color: transparent;
+          }
+    
+          div {
+           @include flexColomn;
+           @include center;
+           text-align: center;
+            align-self: center;
+            width: 25vw;
+            transform:skew(-9deg
+            );
+            -webkit-transform: skew(-9deg);
+            -moz-transform: skew(0deg);
+            -o-transform: skew(0deg);
+            color: white;
+            
+            h1, h3 {
+              @include flexColomn;
+              align-items: center;
+              gap: 1rem;
+              z-index: 9999 !important;
+            }
+           
+            .logo {
+              display: flex;
+              width: 35px;
+              height: 35px;
+              border-radius: 50%;
+              position: relative;
+              background-color: $blue;
+            }
+            
+           .logo::before {
+             content: "";
+             position: absolute;
+             width: 100%;
+             height: 100%;
+             background-color: inherit;
+             border-radius: 50%;
+             z-index: -1;
+             animation: ripple 1.5s ease-out infinite;
+             animation-delay: 0.2s;
+           }
+           
+        
+           @keyframes ripple {
+             from {
+               opacity: 1;
+               transform: scale(0);
+             }
+             to {
+               opacity: 0;
+               transform: scale(3);
+             }
+            }
+          }
+        }
+      }
+    }
+           
+    .indicator {
+     display: none;
+     align-items: center;
+      }
+ }
+           
+
+   // section  2
+
+ .brief {
+    @include flexColomn;
+    color: $white;
+    align-items: center;
+    text-align: center;
+    padding: 5rem;
+    width: 100%;
+    
+   
+   
+    & > h3 {
+          color: $blue;
+          }
+
+        & > h1 {
+            width: 35rem;
+           }
+
+  .pagination-slider {
+    @include flexRow;
+    width: 100%;
+    padding: 5rem;
+          
+           
+    & .swiper-pagination-bullet {
+      background-color: white;
+     
+     
+    }
+
+    & .swiper-pagination-bullet-active {
+      background-color: blue;
+     
+     
+    }
+
+    .items {
+      @include flexRow;
+      width: 100vw;
+      justify-content: center;
+
+
+  .item {
+    @include  flexColomn;
+    padding: 3rem;
+    width: 23rem;
+    height: max-content;
+    gap: 3rem;
+   
+     .images {
+     @include flexColomn;
+      align-items: center;
+      width: 15rem;
+      position: relative;
+
+     .icon1 {
+        width: 12rem;
+        height: 12rem;
+        border-radius: 100%;
+        opacity: .3;
+        @include transition-ease;
+       }
+    
+        .image {
+          width: 15rem;
+          z-index: 10;
+          position: absolute;
+          left: -.5rem;
+        }
+   
+        
+        .icon2 {
+         width: 4rem;
+         z-index: 12;
+         position: absolute;
+         top: 3rem;
+        }
+   
+
+     }
+
+    } 
+  
+    .item:hover .icon1 {
+      opacity: 1;
+    
+     }
+    
+}
+         
+           }
+          
+}
+
+//  section  3
+  .banner-wrapper {
+    background:  url('@/assets/images/plier.jpg')  no-repeat center center/cover;
+    width: 100vw;
+    height: 45rem;
+    align-items: center;
+    justify-content: center;
+  
+    .banner {
+    @include flexColomn;
+    @include banner;
+    
+        h1 {
+        span {
+          color: $blue;
+        }
+    }
+      
+    p {
+      color: $dark-alt;
+    }
+    
+      .buttons {
+    @include flexRow;
+    gap: 1rem;
+    
+      a {
+      @include colorButton;
+      gap: .5rem;
+    
+
+      &:hover {
+        @include hover;
+      }
+  
+     }
+
+
+      }
+    }
+    }
+
+  
+  }
+
+  @media screen  and (max-width: 1024px){
+section#services {
+  summary {
+
+    .ovarall{
+      @include flexRow;
+
+      .summary {
+       
+        
+        .summarySlat{
+          width: 50vw;
+          height: 40vw;
+      content: "";
+      -webkit-transform: skew(0deg);
+      -moz-transform: skew(0deg);
+      -o-transform: skew(0deg);
+
+      &:hover {
+        transform: scale(1);
+        
+      }
+    
+          div {
+            width: 40vw;
+            transform:skew(0deg
+            );
+            -webkit-transform: skew(0deg);
+            -moz-transform: skew(0deg);
+            -o-transform: skew(0deg);
+        }
+        }
+    }
+
+ }
+ .indicator {
+ @include indicator;
+
+ }
+}
+ 
+
+.brief {
+  
+ .ovarall-image {
+   
+    .overhead-gallery {
+     
+
+      .gallery-wrapper{
+           
+
+      .gallery {
+        @include  flexColomn;
+                width: 18rem;
+                height: 22rem;
+
+
+
+                #icon {
+                  color: white;
+                  size: 15rem;
+                  width: 5rem;
+                  z-index: 99;
+
+                }
+          .electrical-icon2 {
+                    width: 17rem;
+                    height: 15rem;
+                  }
+
+  }
+}
+
+}
+.indicator {
+@include indicator;
+
+}
+}
+
+}
+
+
+.banner-wrapper {
+background: url(https://media.istockphoto.com/id/901478514/photo/young-electrician-working-in-a-residential-electrical-installation.jpg?s=612x612&w=0&k=20&c=nIbxi-xzxffAhBarHGN4tS6nvzxuAXaJrBACykwx3M8=) no-repeat center center/cover;
+width: 100vw;
+height: 30rem;
+ align-items: center;
+ justify-content: center;
+
+ 
+
+.banner {
+ @include flexColomn;
+ @include bannerMd;
+
+ 
+}
+}
+    }
+
+}
+@media screen  and (max-width: 820px){
+  section#services {
+
+
+  summary {
+
+    .ovarall{
+    
+      .summary {
+      
+        .summarySlat{
+          width: 100vw;
+          height: 50vw;
+        
+      
+          div{
+            width: 70vw;
+          }
+        }
+     
+              
+    }
+
+
+ }
+ 
+}
+
+//  .brief {
+//    height: 38rem;
+//        & > h3 {
+//          color: $blue;
+//           font-size:2.5vw;
+//          }
+//        & > h1 {
+//           font-size: 5vw;
+//            width: 35rem;
+//            margin-bottom: 25rem;
+//           }
+
+//    .gallery-wrapper {
+  
+      
+//  .gallery {
+       
+//            }
+ 
+// }
+// .indicator {
+//  @include indicator;
+//  width: 2px;
+//  height: 2px;
+//  }
+//  }
+
+
+ .banner-wrapper {
+ background: url(https://media.istockphoto.com/id/901478514/photo/young-electrician-working-in-a-residential-electrical-installation.jpg?s=612x612&w=0&k=20&c=nIbxi-xzxffAhBarHGN4tS6nvzxuAXaJrBACykwx3M8=) no-repeat center center/cover;
+ width: 100vw;
+ height: 30rem;
+  align-items: center;
+  justify-content: center;
+ 
+  
+
+ .banner {
+  @include flexColomn;
+  @include bannerSm;
+  
+
+    
+ }
+ }
+
+ 
+ }
+ 
+
+ 
+  }

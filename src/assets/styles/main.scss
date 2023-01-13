@@ -1,0 +1,327 @@
+@import 'config';
+@import 'home';
+@import 'services';
+@import 'projects';
+@import 'maintenance';
+@import 'footerMap';
+@import 'menuBar';
+@import 'vueTransition';
+
+@import url("https://unicons.iconscout.com/release/v4.0.0/css/line.css");
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+* a {
+    text-decoration: none;
+}      
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+    text-decoration: none;
+    position: relative;
+    background: $primary;
+    
+
+    * h1 {
+      font-size: 2rem;
+     }
+    * h3 {
+      font-size: 1rem;
+     }
+    * p {
+      font-size: 1rem;
+     }
+    * h2 {
+      font-size: 1.5rem;
+     }
+    
+}    
+button {
+    cursor: pointer;
+    appearance: none;
+    border: none;
+    outline: none;
+}
+
+#WhatsApp {
+  position: fixed;
+  top: 75vh;
+  right: 10vw;
+  width: 5rem;
+  z-index: 10;
+  }
+  
+nav {
+  @include flexColomn;
+  // justify-content: center;
+  // align-items: center;
+  // width: 100vw;
+   
+  
+  .navtop-wrapper {
+    @include flexColomn;
+ 
+
+    .navbar-top  {
+      display: grid;
+      grid-template-columns: 40% 30% 30%;
+      padding-top: 1rem;
+      @include listIcon;
+      @include center;
+      // width: 1400px;
+
+      // display: grid;
+      // grid-template-columns: 40% 30% 30%;
+      // padding-top: 1rem;
+      // @include listIcon;
+      // @include center;
+      // width: 100%;
+
+
+
+
+      h3 {
+        color: $white-alt;
+      }
+      
+      li {
+        justify-content: center;
+        color: white;
+      }
+
+  }
+
+  .arrow {
+    @include flexRow;
+    color: white;
+    align-items: center;
+
+    #arrowDown {
+        display: none;
+      }
+  }
+  }
+
+  .navbar-container {
+    @include gridRow;
+    grid-template-columns: 10% auto;
+    // max-width: 1400px;
+    gap: 10vw;
+    color: $white;
+    background: black;
+    position: relative;
+    z-index: 99;
+    width: 100%;
+        
+        
+      
+    .navbar-left{
+      @include flexRow;
+      @include center;
+      margin: 0;
+      padding: 0;
+
+    .menu {
+      display: none;
+    }
+    
+    .luqtech {
+        align-items: center;
+        @include luqtech;
+
+    
+      }
+    }
+    
+    .navbar-right {
+     @include flexRow;
+      gap: 5vw;
+      align-items: center;
+      
+      .link {
+      color: $white;
+      }
+      
+       .link:hover {
+        animation: link 0.82s cubic-bezier(0.36, .07, .19, .97) both;
+        transform: translate3d(0, 0, 0);
+    
+        @keyframes link {
+        10%,
+        90% {
+        transform: translate3d(-1px, 0, 0);
+          }
+        
+        20%,
+        80% {
+        transform: translate3d(2px, 0, 0);
+          }
+        
+        30%,
+        50%,
+        70% {
+        transform: translate3d(-4px, 0, 0);
+          }
+        40%,
+        60% {
+        transform: translate3d(4px, 0, 0);
+     
+          }
+        }
+        
+      }
+        
+      #appointment {
+      @include colorButton;
+      
+      }
+      #appointment:hover {
+        @include hover;
+      }
+      }
+        }
+      
+      }
+
+
+    @media screen  and (max-width: 1024px){
+      body {
+        * h1 {
+          font-size: 1.5rem;
+          }
+        * h3 {
+          font-size: .9rem;
+          }
+        * p {
+          font-size: .9rem;
+          }
+        * h2 {
+          font-size: 1.3rem;
+          }
+
+    }    
+
+    #WhatsApp {
+      width: 4rem;
+      }
+
+    nav {
+      .navtop-wrapper {
+
+        .navbar-top  {
+          grid-template-columns: 100%;
+            justify-items: flex-start;
+            padding: 2rem;
+
+            li {
+              display: flex;
+              justify-content: center;
+            }
+            
+              }
+
+              #arrowDown {
+                @include flexRow;
+                color: white;
+                align-self: center;
+              }
+              
+      }
+
+      
+        .navbar-container {
+          display: flex;
+          align-items: center;
+          position: relative;
+          
+
+      .navbar-left{
+        justify-content: space-between;
+        padding: 0 5vw;
+        width: 100vw;
+    .menu {
+    @include flexColomn;
+    gap: 5px;
+
+    span {
+      background-color: $white;
+      width: 35px;
+      height: 2px;
+    }
+    :nth-child(1){
+      width: 35px;
+    }
+    :nth-child(2){
+      width: 30px;
+    }
+    :nth-child(3){
+      width: 25px;
+    }
+    }
+        .luqtech {
+          @include flexRow;
+          font-size: 1.5rem;
+          img {
+            height: 3rem;
+            width: 2rem;
+          }
+        }
+      }
+      
+      .navbar-right {
+        display: none;
+        
+        
+
+      }
+        }
+      }
+
+  }
+
+  @media screen  and (max-width: 820px){
+    body {
+    
+      background: $primary;
+      
+  
+      * h1 {
+        font-size: 1.5rem;
+       }
+      * h3 {
+        font-size:.8rem;
+       }
+      * p {
+        font-size:.8rem;
+       }
+      * h2 {
+        font-size: 1.2rem;
+       }
+      
+  }    
+
+  #WhatsApp {
+    width: 3rem;
+    }
+
+nav {
+    @include flexColomn;
+    width: 100vw;
+   
+   
+  }    
+    }
+  
+
+    
+
+
+
+

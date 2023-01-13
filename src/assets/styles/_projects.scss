@@ -1,0 +1,420 @@
+section#project {
+    @include flexColomn;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+      color: $white;
+    
+    .luqtech-facebook {
+      font-size: 1rem;
+      color:$blue;
+     
+    }
+    
+    .heading {
+     @include flexRow;
+      align-items: center;
+      gap: 2rem;
+    
+
+     
+    .border {
+   border-bottom: 2px solid $blue;
+      }
+
+    }
+    
+ .gallery {
+
+    & > div {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+    gap: .5rem;
+  
+   img {
+     width: 18vw;
+     height: 18vw;
+
+   }
+    }
+   }
+  }
+
+   #testimonial {
+    @include flexColomn;
+    align-items: center;
+    width: 100%;
+    color: $white;
+    margin-top: 10rem;
+   background: $dark-alt;
+   padding-top: 5rem;
+   position: relative;
+   z-index: 1;
+
+   
+ .testimonialHead {
+ @include flexRow;
+ justify-content: space-around;
+
+ width: 100vw;
+ height: 10rem;
+ 
+  
+    .our-statisticsFirst {
+      width: 15rem;
+     
+      h3 {
+        color: $blue;
+      
+      }
+   }
+   
+
+   .projectType {
+    @include flexRow;
+    justify-content: space-evenly;
+   width: 50vw;
+   
+    & > div {
+      @include flexColomn;
+      align-items: flex-start;
+     
+      h3 {
+        width: max-content;
+      }
+   
+    }
+  }
+}  
+.testimonies {
+  display: grid;
+  grid-template-columns: 40vw 40vw;
+  width: 100vw;
+  align-items: flex-end;
+  gap: 8rem;
+  
+  
+ 
+   .overall-testimonies{
+    @include flexColomn;
+    background: $primary;
+    width: 60vw;
+    height: 32rem;
+    padding: 10vw;
+    justify-content: end;
+    z-index: 11;
+    
+
+    .testimonial {
+      display: flex;
+    flex-direction: column;   
+    left: 3rem;
+      z-index: 2;
+      position: absolute;
+       margin: 3rem;
+    
+
+      
+
+      .testimonials {
+         @include flexColomn;
+       width: 40vw;
+       justify-content: space-between;
+       z-index: 11;
+       height: 16rem;
+   
+
+       .header {
+        @include flexRow;
+        align-items: flex-start;
+        gap: 1rem;
+
+        .clientImg {
+          @include flexColomn;
+          align-items: center;
+  
+          img {
+            width: 7rem;
+            height: 7rem;
+            border-radius: 100%;
+          }
+        }
+  
+       .clients-header {
+        @include flexColomn;
+        align-items: flex-start;
+
+        h1 {
+          line-height: 40px;
+        }
+       }
+       }
+      }
+   
+        }
+        .indicator {
+          @include indicator;
+          align-self: flex-start;
+    
+         }
+      }   
+   
+.emergencyLine {
+@include flexColomn;
+position: relative;
+z-index: 12;
+
+
+.emergency {
+  @include flexColomn;
+ background: $blue;
+ padding: 2rem;
+ width: 22rem;
+ position: absolute;
+ z-index: 15;
+ text-align: center;
+ color: white;
+@include center;
+top: 20rem;
+left: -2rem;
+
+ header {
+  font-size: 2rem;
+ }
+
+ a {
+  @include flexRow;
+  align-items: center;
+  color: white;
+  gap: .5rem;
+ }
+}
+ .projectImg {
+  @include flexColomn;
+  z-index: 1;
+
+ 
+  img {
+   z-index: 1;
+   width: 50vw;
+   height: 35rem;
+  }
+
+}
+}
+  
+
+    }  
+   }   
+      
+ 
+  @media screen  and (max-width: 1024px){
+    section#project {
+
+   .gallery {
+
+      & > div {
+        grid-template-columns: repeat(4, 1fr);
+
+        img {
+          width: 20vw;
+          height: 20vw;
+     
+        }
+       
+      }
+     }
+  
+   
+        
+    }
+  }
+
+  @media screen  and (max-width: 820px) {
+section#project {
+    
+    .luqtech-facebook {
+        font-size: .8rem;
+      }
+
+      .heading {
+        gap: 1rem;
+      }
+   .gallery {
+      & > div {
+     grid-template-columns:repeat(3, 1fr) ;
+     img {
+       width: 25vw;
+       height: 25vw;
+  
+     }
+      }
+     }
+
+    }
+    
+    #testimonial {
+      @include flexColomn;
+      align-items: center;
+      width: 100%;
+      color: $white;
+      margin-top: 10rem;
+     background: $dark-alt;
+     padding-top: 5rem;
+     position: relative;
+
+     
+      
+     .testimonialHead {
+      @include flexColomn;
+      width: 100vw;
+      align-items:  center;
+     height: 20rem;
+     padding-bottom: 5rem;
+     justify-content: space-around;
+     gap: 2rem;
+       
+         .our-statisticsFirst {
+           @include flexColomn;
+           align-items: center;  
+          
+        
+          
+     
+           h3 {
+             color: red;
+             // margin-bottom: 1rem;
+           }
+        }
+        
+     
+        .projectType {
+         @include flexColomn;
+         gap: 1rem;
+        width: 100vw;
+        align-items: center;
+        
+         & > div {
+           align-items: center;
+          
+        
+         }
+       }
+     } 
+  .testimonies {
+    display: grid;
+    grid-template-columns: 100vw;
+    width: 100vw;
+    align-items: flex-end;
+    gap: 8rem;
+    
+    
+   
+     .overall-testimonies{
+      @include flexColomn;
+      background: $primary;
+      width: 100vw;
+      height: 32rem;
+      padding: 10vw;
+      justify-content: end;
+      z-index: 11;
+      // position: relative;
+  
+      .testimonial {
+        display: flex;
+      flex-direction: column;   
+      left: 0rem;
+        z-index: 2;
+        position: absolute;
+         margin: 3rem;
+      
+  
+        
+  
+        .testimonials {
+           @include flexColomn;
+         width: 70vw;
+         justify-content: space-between;
+         z-index: 11;
+         height: 16rem;
+     
+  
+         .header {
+          @include flexRow;
+          align-items: flex-start;
+          gap: 1rem;
+  
+          .clientImg {
+            @include flexColomn;
+            align-items: center;
+    
+            img {
+              width: 5rem;
+              height: 5rem;
+              border-radius: 100%;
+            }
+          }
+    
+         .clients-header {
+          @include flexColomn;
+          align-items: flex-start;
+  
+          h1 {
+            line-height: 40px;
+          }
+         }
+         }
+        }
+     
+          }
+          .indicator {
+            @include flexRow;
+            gap: 10px;
+            margin-left: 4vw;
+            align-self: flex-start;
+    
+            & > div {
+             width: 10px;
+             height: 10px;
+             background: $white;
+             border-radius: 100%;
+            }
+           }
+        }   
+     
+  .emergencyLine {
+  @include flexColomn;
+  position: relative;
+  z-index: 12;
+  
+  
+  .emergency {
+  left: 10rem;
+  // transform: translateY( 30rem);
+  
+   header {
+    font-size: 1.5rem;
+   }
+  
+  }
+   .projectImg {
+    @include flexColomn;
+    z-index: 1;
+  
+   
+    img {
+     z-index: 1;
+     width: 100vw;
+     height: 35rem;
+    }
+  
+  }
+  }
+    
+  
+      }  
+     }   
+          
+        
+  
+  }

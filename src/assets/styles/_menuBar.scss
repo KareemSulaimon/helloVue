@@ -1,0 +1,44 @@
+#menu {
+  @include flexColomn;
+  align-items: flex-start;
+  gap: 5rem;
+  background: $primary;
+  color: $white;
+  width: 90vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  gap: 1rem;
+  padding-top: 2rem;
+  overflow: hidden;
+  & > li {
+    @include flexRow;
+    padding-left: 2rem;
+    align-items: center;
+
+  }
+
+  ul {
+    @include flexColomn;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 2rem;
+    align-items: flex-start;
+
+    a {
+     @include flexRow;
+      color: $white;
+      width: 80vw;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    
+  }
+  hr {
+      border-top: 1px solid $white-alt;
+      width: 90vw;
+     
+    }
+}

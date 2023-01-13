@@ -1,0 +1,346 @@
+$primary:  rgb(15, 4, 4);
+$blue: rgb(12, 12, 242);
+$Lblue: rgb(54, 19, 250);
+$dark: #1e293b;
+$dark-alt: #334155;
+$white: #fff;
+$white-alt: rgb(213, 207, 207);
+
+
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Fira sans', sans-sarif;
+text-decoration: none;
+list-style: none;
+}
+@mixin widthH {
+  width: 60rem;
+  height: 50rem;
+}
+@mixin listIcon {
+ 
+    li  {
+    color: $white-alt;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  
+        .logo {
+          margin-right: .5rem;
+        }
+        #last {
+           color: $white-alt;
+         }
+        a {
+          color: $white-alt;
+        }
+      }
+    
+}
+
+@mixin flexColomn  {
+  display: flex;
+  flex-flow: column;
+  
+}
+@mixin flexRow  {
+  display: flex;
+  flex-flow: row;
+ 
+}
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out; 
+ }
+
+@mixin center  {
+  align-items: center;
+  justify-content: center;
+ 
+}
+@mixin gridRow  {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin colorButton  {
+  @include flexRow;
+ @include center;
+  background-color:$blue;
+  color: $white;
+  width: 10rem;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  @include transition-ease; 
+
+  
+}
+
+@mixin vLine  {
+  border-left: 2px solid $white-alt;
+  height: 50px;
+  margin-left: 3rem;
+}
+
+@mixin hover  {
+  color: $blue;
+  background-color:$white;
+  border: 2px solid $blue;
+  @include transition-ease;
+}
+
+@mixin luqtech  {
+  @include flexRow;
+  align-items: center;
+      img {
+        height: 4rem;
+        width: 3rem;
+      }
+      a {
+        color: $white;
+      }
+    }
+
+@mixin banner  {
+  width: 30rem;
+  background: white;
+   position: absolute;
+   gap: 1rem;
+   margin: 10rem;
+     padding:3rem 7rem 3rem 3rem;
+     height: 25rem;
+     h1 {
+      color: black;
+      font-size: 2rem;
+      line-height: 40px;
+      margin-left: 1.5rem;
+        
+     }
+ 
+      
+    
+    .vl {
+     border-left: 4px solid $blue;
+     height: 6.7rem;
+     margin-left: 3rem;
+     position: absolute;
+     left: 0px;
+     top: 3.3rem;
+ 
+   }
+}
+@mixin bannerMd  {
+  width: 25rem;
+  background: white;
+   position: absolute;
+   gap: .5rem;
+   margin: 5rem;
+   align-self: center;
+   justify-content: center;
+     padding: 1rem 2rem;
+     height: 20rem;
+    //  h1 {
+    //   line-height: 30px;
+    //   margin-left: 1.5rem;
+    //   width: 15rem;
+     
+    //  }
+      
+      .buttons {
+    @include flexRow;
+    gap: 1rem;
+    margin-top: 1rem;
+    
+     button, a {
+      padding: .5rem .1rem;
+      gap: 3px;
+      width: 10rem;
+      font-size: .8rem;
+      
+    
+    
+     }
+    
+    
+     
+      }
+     
+    .vl {
+     border-left: 3px solid $blue;
+     height: 6.5rem;
+     margin-left: 2rem;
+     position: absolute;
+     left: 0px;
+     top: 2.5rem;
+ 
+   }
+}
+@mixin bannerSm {
+  width: 20rem;
+  background: white;
+   position: absolute;
+   gap: .5rem;
+   margin: 5rem;
+   align-self: center;
+   justify-content: center;
+     padding: 1rem 2rem;
+     height: 20rem;
+     
+     h1 {
+     font-size: 1.5rem;
+     line-height: 30px;
+     }
+     p {
+     font-size: .8rem
+     }
+      .buttons {
+    @include flexRow;
+    gap: 1rem;
+    margin-top: 1rem;
+    
+     button, a {
+      padding: .5rem .1rem;
+      gap: 3px;
+      width: 10rem;
+      font-size: .8rem;
+      
+    
+    
+     }
+    
+    
+     
+      }
+     
+    .vl {
+     border-left: 3px solid $blue;
+     height: 5.2rem;
+     margin-left: 2rem;
+     position: absolute;
+     left: 0px;
+     top: 3rem;
+ 
+   }
+}
+
+@mixin indicator  {
+  @include flexRow;
+  gap: 10px;
+  margin-top: 2rem;
+  align-items: center;
+  align-self: center;
+  
+  // margin-left: 4vw;
+
+  & > div {
+   width: 8px;
+   height: 8px;
+   background: $white;
+   border-radius: 100%;
+  }
+ }
+  @media screen and (max-width: 1024px) {
+     
+     h1 {
+      font-size: 2rem;
+      line-height: 1.1;
+  }
+  
+  h2 {
+      font-size: 1.6rem;
+  }
+  
+  h3 {
+      font-size: 1.2rem;
+  }
+  
+  
+  p {
+      font-size: 1rem;
+  }
+
+
+  }
+
+@mixin media-sm {
+  @media screen and (max-width: 680px) {
+     @content; 
+  }
+  h1 {
+      color: $color-black;
+      font-size: 3.5rem;
+      line-height: 1;
+  }
+  
+  h2 {
+      font-size: 1.5rem;
+  }
+  
+  h3 {
+      font-size: 1rem;
+  }
+  
+  
+  
+  p {
+      font-size: 1rem;
+     
+  }
+}
+
+
+@mixin media-xl {
+  @media screen and (min-width: 1024px) {
+     @content; 
+  }
+  h1 {
+   
+      font-size: 7rem;
+      line-height: 1.2;
+  }
+  
+  h2 {
+      font-size: 1.5rem;
+  }
+  
+  h3 {
+      font-size: 1.6rem;
+  }
+  
+  // p {
+  //     font-size: 1rem;
+  // }
+  
+  p {
+      font-size: 1rem;
+      // color: $color-black;
+  }
+}
+@mixin media-md {
+  @media screen and (min-width: 1024px) {
+     @content; 
+  }
+  *h1 {
+   
+      font-size: 1rem;
+     
+  }
+  
+  *h2 {
+      font-size: 1.5rem;
+  }
+  
+ * h3 {
+      font-size: 1rem;
+  }
+  
+  
+ * p {
+      font-size: 1rem;
+  
+  }
+}
+

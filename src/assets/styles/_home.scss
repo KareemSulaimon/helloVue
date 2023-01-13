@@ -1,0 +1,427 @@
+#home {
+    @include flexColomn;
+   
+   
+    
+    & #bg {
+      @include flexColomn;
+     @include center;
+      height: 120vh;
+      animation-name: backgroundImage;
+      transition: 1s;
+        // background:  url('@/assets/images/a.jpg');
+        
+        & .quote {
+          @include flexColomn;
+        align-items: center;
+        width: npm35rem;
+        text-align: center;
+        color: $white;
+        animation-name: textAnimation;
+        transition: 1s;
+
+    h3 {
+      font-size: 1.5rem;
+    }
+    h1 {
+     
+      font-size: 4rem;
+    }
+  }
+
+  @keyframes textAnimation {
+    from {
+     opacity: 0;
+   
+    }
+    to {
+     opacity: 0.9;
+    
+    }
+     
+   }
+ }
+
+  @keyframes backgroundImage {
+  from {
+    opacity: 0.9;
+  }
+  to {
+    opacity: 0.9;
+  }
+    
+  }
+
+  
+  & .form {
+    display: flex;
+    flex-flow: column;
+    width: 85vw;
+    align-items: flex-start;
+    align-self: center;
+    transform: translateY(-3rem);
+  
+  & h2 {
+    background: $blue;
+    color: $white;
+    padding: .5rem 1.5rem;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    height: 3rem;
+
+    .logo {
+      display: none;
+     }
+  }
+  
+ .inputs {
+   @include flexRow;
+    background: $white;
+    justify-content: space-around;
+    padding: 1rem;
+    gap: .5rem;
+    align-items: center;
+    position: relative;
+
+
+    & input {
+      height: 2.5rem;
+      list-style: none;
+      outline: 0;
+      width: 16vw;
+      border-radius: .5rem;
+      padding: 0 1rem;
+      background: $white;
+    
+      input::placeholder {
+        font-size: 1rem;
+      }
+    
+    }
+    
+      .service{
+          background: $blue;
+          color:  $white;
+          border: none;
+          &:hover {
+           @include hover;
+           
+           }
+        }
+      
+
+  }
+  }
+
+
+   
+}
+  //  this html is contain in AboutApp.vue
+section#about {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding-left: 5vw;
+  z-index: -99;
+  
+  .left {
+      .image1 {
+          width: 60vw;
+        }
+
+        
+      .image2 {
+        width:  50%;
+        transform: translate(-20%, -30%);
+        z-index: -99;
+      }
+  
+  }
+  
+ .right {
+    @include flexColomn;
+    background:  $white;                                                                                                                                                                                                                                                                                                                                                              ;
+    padding: 4rem;
+    width: 45vw;
+    margin-top: 3rem;
+    height: max-content;
+    color: $primary;
+  
+  
+   & > h5 {
+    color: $blue;
+   
+   }
+   & > header {
+    color: black;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+   }
+   & > p {
+    margin-bottom: 1rem;
+
+   }
+   .services  {
+   @include flexColomn;
+  
+
+
+       li {
+       @include flexRow;
+        align-items: center;
+         .logo   {
+        margin-right: .5rem;
+          color: $blue;
+         }
+       }
+  }
+  .about-luqtech {
+ display: grid;
+ grid-template-columns:20% 20% 15% 45%;
+ align-items: center;
+ margin-top: 1rem;
+
+
+.vl {
+  @include vLine;
+}
+  
+  .about-CEO {
+    @include flexColomn;
+   @include center;
+  align-self: center;
+  width: 5rem;
+   h5 {
+    font-size: 1vw;
+    width: 100%;
+   }
+   small {
+    display: inline;
+    font-size: 1.1vw;
+    width: 100%;
+
+   }
+  }
+  .passport {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 100%;
+  }
+
+  .signature {
+    width: 17vw;
+    
+  }
+
+    }
+  }
+  }
+
+
+  @media screen  and (max-width: 1024px){
+    #home {
+     
+      & #bg {
+        height: 80vh;
+       
+        & .quote {
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  }
+    
+    & .form {
+      top: 65vh;
+      width: 100vw;
+    
+   
+    
+      & .inputs {
+      padding: 1rem 2rem;
+     align-items: center;
+      width: 100vw;
+  }
+
+}
+  
+}
+
+    section#about {
+      
+     .right {                                                                                                                                                                                                                                                                                                                                                      
+         width: 50vw;
+      .services  {
+             li {
+             @include flexRow;
+              align-items: center;
+               .logo   {
+              margin-right: .5rem;
+                color: $blue;
+               }
+             }
+        }
+        .about-luqtech {
+        
+  
+      .vl {
+        @include vLine;
+      }
+        
+        .about-CEO {
+          @include flexColomn;
+         margin-left: 1vw;
+         @include center;
+         h5 {
+          font-size: 1.2vw;
+         }
+         small {
+          font-size: 1.5vw;
+         }
+        }
+        .passport {
+          height: 6vw;
+          width: 6vw;
+          border-radius: 100%;
+        }
+      
+        .signature {
+          width: 25vw;
+          
+        }
+      
+          }
+        }
+        }
+    
+  }
+
+  @media screen  and (max-width: 820px){
+    
+    #home {
+     
+      & #bg {
+      
+        & .quote {
+          width: 30rem;
+    
+      h3 {
+       
+        font-size: 1rem;
+      }
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  }
+    
+    & .form {
+      display: flex;
+      
+    
+    & h2 {
+      display: flex;
+    background: $blue;
+    align-self: center;
+    align-items: center;
+
+     
+    .logo {
+      display: flex;
+    }
+    }
+    
+& .inputs {
+display: grid;
+grid-template-areas: 'name name name name '
+'email email  phone phone '
+'date date date date'
+'service  service service service';
+gap: 10px;
+padding: 10px;
+background-color: $primary;
+
+      
+     
+    .item1 {
+grid-area: name;
+    }      
+    .item2 {
+grid-area: email;
+    }      
+    .item3 {
+grid-area: phone;
+    }      
+    .item4 {
+grid-area: date;
+    }      
+    .service {
+grid-area: service;
+    }      
+
+
+& input {
+ width: 100%;
+
+
+}
+  }
+  }
+
+    }
+    
+
+
+  section#about {
+    display: grid;
+    grid-template-columns: 100%;
+    padding: 3vw;
+    z-index: -99;
+    align-items: center;
+      
+          .left {
+      .image1 {
+            width: 90vw; 
+          }
+      // .image2 {
+      //   width:  80%;
+      //     }
+       
+      
+        }
+      
+    .right {                                                                                                             
+     width: 90vw;
+  
+    
+    
+      & > header {
+        font-size: 2rem;
+        line-height: 2rem;
+        margin-bottom: 1rem;
+      }
+  
+      .about-luqtech {
+          .about-CEO {
+        
+           h5 {
+            font-size: .8rem;
+           }
+           small {
+            font-size: .8rem;
+           }
+          }
+          .passport {
+            height: 10vw;
+            width: 10vw;
+            border-radius: 100%;
+          }
+        
+          .signature {
+            width: 35vw;
+          }
+        
+            }
+      }
+      }
+    }
